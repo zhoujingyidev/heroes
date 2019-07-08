@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import axios from "axios"
+
 
 export default {
   //接收外部传递的参数
@@ -48,7 +48,7 @@ export default {
   methods: {
     //根据id加载英雄数据
     loadDataById() {
-      axios.get(`http://localhost:3000/heroes/${this.id}`).then(response => {
+      this.axios.get(`http://localhost:3000/heroes/${this.id}`).then(response => {
         const { data, status } = response
         if (status === 200) {
           this.formData = data
@@ -57,7 +57,7 @@ export default {
     },
     //修改数据的方法
     update() {
-      axios
+      this.axios
         .put(`http://localhost:3000/heroes/${this.id}`,this.formData)
         .then((response) => {
           const status = response.status

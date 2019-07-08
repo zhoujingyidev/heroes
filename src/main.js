@@ -7,6 +7,8 @@ Vue.config.productionTip = false
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import './assets/index.css'
 
+import axios from 'axios'
+Vue.prototype.axios = axios
 
 import router from './router'
 
