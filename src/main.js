@@ -8,6 +8,9 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import './assets/index.css'
 
 import axios from 'axios'
+
+axios.defaults.baseURL = 'http://localhost:3000/'
+
 Vue.prototype.axios = axios
 
 import router from './router'

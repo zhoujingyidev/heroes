@@ -48,7 +48,7 @@ export default {
   methods: {
     //根据id加载英雄数据
     loadDataById() {
-      this.axios.get(`http://localhost:3000/heroes/${this.id}`).then(response => {
+      this.axios.get(`heroes/${this.id}`).then(response => {
         const { data, status } = response
         if (status === 200) {
           this.formData = data
