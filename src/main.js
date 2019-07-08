@@ -12,10 +12,18 @@ import './assets/index.css'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
+//导入英雄列表的组件
+import HeroList from './views/heroes/HeroList.vue'
+import EquipsList from './views/equips/EquipsList.vue'
+import WeaponList from './views/weapons/WeaponList.vue'
+
 //配置路由模块
 const appRouter = new VueRouter({
-  router:[
-
+  routes:[
+    { name:'home', path:'/', redirect:'/heroes'},
+    { name:'heroes', path:'/heroes',component:HeroList},
+    { name:'equips', path:'/equips',component:EquipsList},
+    { name:'weapons', path:'/weapons',component:WeaponList},
   ]
 })
 
